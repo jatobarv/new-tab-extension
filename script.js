@@ -15,7 +15,7 @@ const pages = [
     url: "https://www.funimation.com/",
   },
   {
-    faviconUrl: "mail.google.com",
+    faviconUrl: "https://mail.google.com/mail/u/0/#inbox",
     name: "Gmail",
     url: "https://mail.google.com/mail/u/0/#inbox",
   },
@@ -55,8 +55,9 @@ const pages = [
 const container = document.querySelector("#shortcut-container");
 
 pages.forEach((page) => {
-  // https://s2.googleusercontent.com/s2/favicons?domain=${page.faviconUrl}&sz=32
-  const faviconUrl = `chrome://favicon2/?size=24&scaleFactor=1x&showFallbackMonogram=&pageUrl=https%3A%2F%2F${page.faviconUrl}%2F`;
+  // https://s2.googleusercontent.com/s2/favicons?domain=${page.faviconUrl}&sz=24
+  // chrome://favicon2/?size=24&scaleFactor=1x&showFallbackMonogram=&pageUrl=https%3A%2F%2F${page.faviconUrl}%2F
+  const faviconUrl = `https://s2.googleusercontent.com/s2/favicons?domain=${page.faviconUrl}&sz=24`;
   const favicon = document.createElement("img");
   const tileText = document.createElement("div");
   const span = document.createElement("span");
